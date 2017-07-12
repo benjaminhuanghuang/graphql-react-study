@@ -4,13 +4,17 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.3",
     "lodash": "^4.17.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "json-server": "^0.11.2"
+  },
   "scripts": {
+    "json:server": "json-server --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
