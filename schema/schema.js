@@ -5,7 +5,7 @@ const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLList, GraphQLSchema
 
 const CompanyType = new GraphQLObjectType({
     name: 'Company',
-    fields: () => ({
+    fields: () => ({     // avoid circle reference
         id: { type: GraphQLString },
         name: { type: GraphQLString },
         description: { type: GraphQLString },
@@ -21,7 +21,7 @@ const CompanyType = new GraphQLObjectType({
 
 const UserType = new GraphQLObjectType({
     name: 'User',
-    fields: {
+    fields: ()=> ({   // avoid circle reference
         id: {
             type: GraphQLString
         },
@@ -38,7 +38,7 @@ const UserType = new GraphQLObjectType({
                     .then(res => res.data);
             }
         }
-    }
+    })
 });
 
 const RootQuery = new GraphQLObjectType({

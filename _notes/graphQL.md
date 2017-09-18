@@ -13,6 +13,17 @@
 ```
 {
 	user(id:"23"){
+    firstName,
+    company{
+      name
+    }
+  }
+}
+```
+```
+company(id:"1"){
+  name,
+  users{
     firstName
   }
 }
