@@ -1,4 +1,4 @@
-# library
-npm install --save express express-graphql graphql lodash
 
-npm install --save-dev json-server
+## Dependencies
+npm i -S express express-graphql graphql lodash
+npm i -D json-server

@@ -1,13 +1,7 @@
 const graphql = require('graphql');
 const axios = require('axios');
 
-
-const {
-    GraphQLObjectType,
-    GraphQLString,
-    GraphQLInt,
-    GraphQLSchema
-} = graphql;
+const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = graphql;
 
 const UserType = new GraphQLObjectType({
     name: 'User',
@@ -23,7 +17,6 @@ const UserType = new GraphQLObjectType({
         }
     }
 });
-
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
@@ -46,5 +39,4 @@ const RootQuery = new GraphQLObjectType({
 
 module.exports = new GraphQLSchema({
     query: RootQuery,
-
 })
