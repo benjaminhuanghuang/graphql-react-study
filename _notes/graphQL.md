@@ -9,4 +9,11 @@
 
 - How do we use GraphQL
 
-## root query
+## Query
+```
+{
+	user(id:"23"){
+    firstName
+  }
+}
+```

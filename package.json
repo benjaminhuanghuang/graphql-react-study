@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "express": "^4.15.3",
@@ -11,11 +16,8 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "json-server": "^0.11.2"
-  },
-  "scripts": {
-    "json:server": "json-server --watch db.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "json-server": "^0.11.2",
+    "nodemon": "^1.12.1"
   },
   "repository": {
     "type": "git",

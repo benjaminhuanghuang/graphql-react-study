@@ -29,8 +29,10 @@ const RootQuery = new GraphQLObjectType({
                 }
             },
             resolve(parentValue, args) {
-                return axios.get(`http://localhost:3000/users/${args.id}`)
-                    .then(res => res.data);
+                // resolve function will fetch data from database
+                let prm = axios.get(`http://localhost:3000/users/${args.id}`)
+                .then(res => res.data);
+                return prm;
             }
         }
     }

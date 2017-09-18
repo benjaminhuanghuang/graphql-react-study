@@ -6,8 +6,8 @@ const schema = require('./schema/schema');
 
 // route
 app.use('/graphql', expressGraphQL({
-    schema,
-    graphiql: true  // for dev environment
+    schema : schema,
+    graphiql: true  // If you want to show GraphiQL in the browser, set graphiql: true
 }));
 
 
